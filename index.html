@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <title>Vendre ma maison à Sherbrooke | Équipe Chiasson De Francesco</title>
-    <meta name="description" content="Confiez la vente de votre propriété à Sherbrooke à l'Équipe Chiasson De Francesco. Service de prestige, mise en marché exceptionnelle et évaluation privée.">
+    <meta name="description" content="L'Équipe Chiasson De Francesco, courtiers immobiliers chez RE/MAX D'ABORD, accompagne la vente de propriétés à Sherbrooke.">
     <meta name="keywords" content="vendre maison sherbrooke, courtier immobilier sherbrooke, Équipe Chiasson De Francesco, immobilier sherbrooke, rock forest, fleurimont, évaluation immobilière">
     <meta name="robots" content="index, follow">
 
@@ -20,7 +20,7 @@
                         remaxRedHover: '#B9151B',
                         luxuryDark: '#0A1128', /* Bleu nuit profond très luxueux */
                         luxuryLight: '#FDFDFD',
-                        accentGold: '#D4AF37', /* Or subtil pour le prestige */
+                        accentGold: '#D4AF37',
                     },
                     fontFamily: {
                         sans: ['Montserrat', 'sans-serif'],
@@ -36,6 +36,7 @@
     </script>
 
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/src/assets/cdf-contact.css">
 
     <style>
         /* Animations fluides */
@@ -52,26 +53,8 @@
         .reveal-delay-2 { transition-delay: 0.3s; }
         .reveal-delay-3 { transition-delay: 0.45s; }
 
-        /* Formulaire Éditorial Luxe (Dark Mode Glass) */
-        .input-luxury {
-            width: 100%;
-            background-color: transparent;
-            border: none;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-            padding: 1rem 0;
-            color: #FFFFFF;
-            transition: all 0.4s ease;
-            font-size: 0.95rem;
-            font-family: 'Montserrat', sans-serif;
-            font-weight: 300;
-        }
-        .input-luxury::placeholder {
-            color: rgba(255, 255, 255, 0.5);
-        }
-        .input-luxury:focus {
-            outline: none;
-            border-bottom-color: #E11B22;
-            background-color: rgba(255, 255, 255, 0.02);
+        [hidden] {
+            display: none !important;
         }
 
         /* FAQ Accordion Transitions */
@@ -91,100 +74,118 @@
         .faq-icon.rotate {
             transform: rotate(180deg);
         }
+
+        #approche {
+            scroll-margin-top: 16rem;
+        }
+        @media (min-width: 1024px) {
+            #approche {
+                scroll-margin-top: 9rem;
+            }
+        }
     </style>
 </head>
 <body class="font-sans text-gray-800 bg-luxuryLight antialiased selection:bg-remaxRed selection:text-white">
 
-    <header id="main-header" class="fixed w-full top-0 z-50 transition-all duration-700 bg-white/80 backdrop-blur-lg border-b border-transparent py-5">
+    <header id="main-header" class="sticky top-0 z-50 w-full transition-all duration-700 bg-white/95 backdrop-blur-lg border-b border-gray-200 py-4">
         <div class="max-w-7xl mx-auto px-6 lg:px-12">
-            <div class="flex justify-between items-center">
-                <div class="flex flex-col cursor-pointer group">
-                    <span class="font-serif text-xl lg:text-2xl font-bold text-luxuryDark tracking-wide uppercase transition-colors">
-                        Vendremamaison<span class="text-remaxRed italic">sherbrooke</span>.com
+            <div class="flex flex-col gap-4 lg:flex-row lg:items-center lg:justify-between">
+                <div class="min-w-0 w-full lg:w-auto">
+                    <span class="block max-w-full font-serif text-lg sm:text-xl lg:text-2xl font-bold text-luxuryDark tracking-wide uppercase leading-tight">
+                        Vendremamaison<wbr><span class="text-remaxRed italic">sherbrooke</span>.com
                     </span>
-                    <span class="text-[9px] tracking-[0.25em] text-gray-500 mt-1 uppercase font-semibold">Équipe Chiasson De Francesco</span>
+                    <p class="mt-1 text-sm leading-snug">
+                        <a href="https://chiassondefrancesco.ca" class="font-semibold text-luxuryDark underline decoration-gray-300 underline-offset-2 hover:text-remaxRed">Équipe Chiasson De Francesco</a>
+                    </p>
+                    <p class="mt-1 text-sm leading-relaxed text-gray-700 max-w-3xl">
+                        <a href="https://chiassondefrancesco.ca" class="font-semibold text-luxuryDark underline decoration-gray-300 underline-offset-2 hover:text-remaxRed">RE/MAX D'ABORD</a>, agence immobilière, 157 boul. Jacques-Cartier Sud, Sherbrooke (Québec) J1J 2Z4
+                    </p>
                 </div>
-                
-                <div class="hidden md:flex items-center space-x-10">
-                    <a href="#expertise" class="text-xs font-semibold uppercase tracking-widest text-gray-500 hover:text-luxuryDark transition duration-300">Excellence</a>
-                    <a href="#temoignages" class="text-xs font-semibold uppercase tracking-widest text-gray-500 hover:text-luxuryDark transition duration-300">Témoignages</a>
-                    <a href="tel:+18199194631" class="group flex items-center gap-3 border border-luxuryDark/20 bg-transparent rounded-none px-6 py-3 hover:bg-luxuryDark hover:text-white transition duration-500">
-                        <span class="text-xs font-semibold uppercase tracking-widest text-luxuryDark group-hover:text-white transition">819-919-4631</span>
-                    </a>
+
+                <div class="flex flex-wrap items-center gap-x-6 gap-y-3 shrink-0">
+                    <a href="#approche" class="text-xs font-semibold uppercase tracking-widest text-gray-500 hover:text-luxuryDark transition duration-300">Notre approche</a>
+                    <a href="tel:+18199194631" class="inline-flex items-center border border-luxuryDark/20 px-4 py-2.5 text-xs font-semibold tracking-widest text-luxuryDark hover:bg-luxuryDark hover:text-white transition duration-500 whitespace-nowrap">819-919-4631</a>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <section class="relative min-h-screen flex items-center pt-24 overflow-hidden bg-luxuryDark">
+        <section class="relative min-h-screen flex items-center py-16 overflow-hidden bg-luxuryDark">
             <div class="absolute inset-0 z-0 scale-105 transform transition-transform duration-[10s] ease-out hover:scale-100">
-                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Maison de prestige à Sherbrooke" class="w-full h-full object-cover">
+                <img src="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80" alt="Maison résidentielle à Sherbrooke" class="w-full h-full object-cover">
                 <div class="absolute inset-0 bg-gradient-to-r from-luxuryDark/95 via-luxuryDark/80 to-luxuryDark/30"></div>
             </div>
 
-            <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full flex flex-col lg:flex-row items-center justify-between mt-10 lg:mt-0">
+            <div class="max-w-7xl mx-auto px-6 lg:px-12 relative z-10 w-full flex flex-col lg:flex-row items-stretch lg:items-center justify-between">
                 
-                <div class="lg:w-1/2 text-white reveal mb-16 lg:mb-0">
-                    <p class="text-remaxRed font-semibold tracking-[0.3em] uppercase text-xs mb-6 flex items-center gap-4">
-                        <span class="w-8 h-px bg-remaxRed"></span> Expertise Sherbrookoise
+                <div class="w-full lg:w-1/2 text-white reveal mb-16 lg:mb-0">
+                    <p class="text-remaxRed font-semibold tracking-[0.14em] sm:tracking-[0.3em] uppercase text-xs mb-6 flex items-center gap-4">
+                        <span class="w-8 h-px bg-remaxRed"></span> Courtiers à Sherbrooke
                     </p>
                     <h1 class="font-serif text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-8">
-                        Révélez la véritable <br>
-                        <span class="italic text-gray-300 font-light">valeur de votre propriété.</span>
+                        La mise en marché <br>
+                        <span class="italic text-gray-300 font-light">de votre propriété.</span>
                     </h1>
                     <p class="font-light text-lg text-gray-300 mb-10 max-w-lg leading-relaxed">
-                        Le marché immobilier de Sherbrooke exige une connaissance pointue et une mise en marché irréprochable. Confiez la vente de votre patrimoine à des courtiers qui dominent la région.
+                        L'Équipe Chiasson De Francesco, courtiers immobiliers chez RE/MAX D'ABORD, accompagne les propriétaires de Sherbrooke pour la mise en marché de leur propriété.
                     </p>
-                    <a href="#expertise" class="inline-flex items-center text-xs font-semibold uppercase tracking-widest text-white hover:text-remaxRed transition duration-300">
+                    <a href="#approche" class="inline-flex items-center text-xs font-semibold uppercase tracking-widest text-white hover:text-remaxRed transition duration-300">
                         Découvrir notre approche <svg class="w-4 h-4 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path></svg>
                     </a>
                 </div>
 
-                <div class="lg:w-5/12 w-full reveal reveal-delay-2">
-                    <div class="bg-white/10 backdrop-blur-xl border border-white/20 p-10 lg:p-12 shadow-glass relative">
+                <div class="w-full lg:w-5/12 min-w-0 reveal reveal-delay-2">
+                    <div id="evaluation" class="w-full bg-white/10 backdrop-blur-xl border border-white/20 p-6 sm:p-8 lg:p-10 shadow-glass relative">
                         <div class="absolute top-0 left-0 w-full h-1 bg-remaxRed"></div>
-                        
-                        <h2 class="font-serif text-3xl text-white mb-2">Évaluation Privée</h2>
-                        <p class="text-sm text-gray-300 mb-8 font-light">Une analyse confidentielle de la valeur de votre bien sur le marché sherbrookois actuel.</p>
-                        
-                        <form id="premiumLeadForm" class="space-y-6">
-                            <div>
-                                <input type="text" id="name" required placeholder="Votre nom complet" class="input-luxury">
-                            </div>
-                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                                <div>
-                                    <input type="tel" id="phone" required placeholder="Téléphone" class="input-luxury">
+
+                        <h2 class="font-serif text-3xl text-white mb-2">Évaluation privée</h2>
+                        <p class="text-sm text-gray-300 mb-6 font-light">Demande d'évaluation pour une propriété à Sherbrooke.</p>
+
+                        <div class="cdf-contact bg-white p-4 sm:p-5" data-cdf-contact>
+                            <h3 class="cdf-contact-title" id="cdf-contact-title">Demande par courriel</h3>
+                            <p class="cdf-contact-lead">Le message s'ouvre dans votre logiciel de courriel, à p-o.chiasson@remax-quebec.com. Rien n'est envoyé depuis cette page.</p>
+                            <p class="cdf-contact-note">Les champs marqués d'un astérisque sont obligatoires.</p>
+                            <form class="cdf-contact-form" action="mailto:p-o.chiasson@remax-quebec.com?subject=Demande%20du%20site%20vendremamaisonsherbrooke.com" method="post" enctype="text/plain">
+                                <input name="page" type="hidden" value="">
+                                <label class="cdf-contact-span" for="cdf-nom">Nom <span class="cdf-contact-req" aria-hidden="true">*</span>
+                                    <input id="cdf-nom" name="nom" type="text" autocomplete="name" required maxlength="120">
+                                </label>
+                                <label class="cdf-contact-span" for="cdf-courriel">Courriel <span class="cdf-contact-req" aria-hidden="true">*</span>
+                                    <input id="cdf-courriel" name="courriel" type="email" autocomplete="email" inputmode="email" required maxlength="160">
+                                </label>
+                                <label class="cdf-contact-span" for="cdf-telephone">Téléphone
+                                    <input id="cdf-telephone" name="telephone" type="tel" autocomplete="tel" inputmode="tel" maxlength="40">
+                                </label>
+                                <label class="cdf-contact-span" for="cdf-message">Message <span class="cdf-contact-req" aria-hidden="true">*</span>
+                                    <textarea id="cdf-message" name="message" required maxlength="2000" rows="5"></textarea>
+                                </label>
+                                <div class="cdf-contact-span cdf-contact-consent">
+                                    <input id="cdf-consent" name="consentement" type="checkbox" value="oui" required>
+                                    <span><label for="cdf-consent">J'accepte que l'Équipe Chiasson De Francesco utilise ces renseignements pour répondre à ma demande.</label> <a href="https://chiassondefrancesco.ca/confidentialite.html">Politique de confidentialité</a>.</span>
                                 </div>
-                                <div>
-                                    <input type="email" id="email" required placeholder="Courriel" class="input-luxury">
+                                <div class="cdf-contact-span">
+                                    <button class="cdf-contact-submit" type="submit">Ouvrir le courriel</button>
                                 </div>
+                            </form>
+                            <div class="cdf-contact-direct">
+                                <p>Ou joignez l'équipe directement.</p>
+                                <p><a href="mailto:p-o.chiasson@remax-quebec.com">p-o.chiasson@remax-quebec.com</a></p>
+                                <p><a href="tel:+18199194631">819-919-4631</a></p>
                             </div>
-                            <div>
-                                <input type="text" id="address" placeholder="Adresse de la propriété (ex: Rock Forest, Nord...)" class="input-luxury">
-                            </div>
-                            
-                            <button type="submit" class="w-full bg-white hover:bg-remaxRed text-luxuryDark hover:text-white uppercase tracking-widest text-xs font-bold py-5 mt-4 transition-colors duration-500 flex justify-center items-center gap-3 group">
-                                Demander mon évaluation
-                                <svg class="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path></svg>
-                            </button>
-                            <div class="flex items-center justify-center mt-6 text-[10px] text-gray-400 tracking-widest uppercase font-semibold">
-                                <svg class="w-3 h-3 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
-                                Discrétion absolue garantie
-                            </div>
-                        </form>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="expertise" class="py-32 bg-luxuryLight relative">
+        <section id="approche" class="py-32 bg-luxuryLight relative">
             <div class="max-w-7xl mx-auto px-6 lg:px-12">
                 <div class="mb-20 text-center max-w-3xl mx-auto reveal">
-                    <p class="text-remaxRed text-xs font-bold uppercase tracking-widest mb-4">L'Art de l'Immobilier</p>
-                    <h2 class="font-serif text-4xl md:text-5xl text-luxuryDark leading-tight mb-6">Une signature d'excellence en Estrie.</h2>
+                    <p class="text-remaxRed text-xs font-bold uppercase tracking-widest mb-4">Services</p>
+                    <h2 class="font-serif text-4xl md:text-5xl text-luxuryDark leading-tight mb-6">Accompagnement à la vente à Sherbrooke.</h2>
                     <p class="text-gray-500 font-light leading-relaxed text-lg">
-                        Nous ne nous contentons pas d'inscrire votre maison. Nous créons une véritable campagne de marketing pour capter l'attention des acheteurs locaux, ainsi que ceux provenant de l'extérieur de la région.
+                        La mise en marché comprend l'inscription de la propriété et sa diffusion auprès d'acheteurs de la région et de l'extérieur.
                     </p>
                 </div>
 
@@ -193,69 +194,30 @@
                         <div class="w-14 h-14 bg-luxuryLight border border-gray-100 rounded-full flex items-center justify-center mb-8 text-luxuryDark group-hover:text-remaxRed transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path></svg>
                         </div>
-                        <h3 class="font-serif text-2xl text-luxuryDark mb-4">Mise en marché Efficace</h3>
-                        <p class="text-gray-500 font-light text-sm leading-relaxed">Photographie HDR, vidéographie, home staging virtuel et présentation éditoriale. L'image de votre propriété sera irréprochable et se démarquera sur le marché.</p>
+                        <h3 class="font-serif text-2xl text-luxuryDark mb-4">Présentation de la propriété</h3>
+                        <p class="text-gray-500 font-light text-sm leading-relaxed">La mise en marché peut comprendre des photos, une vidéo, un home staging virtuel et une fiche descriptive.</p>
                     </div>
 
                     <div class="bg-white p-10 shadow-floating border border-gray-50 reveal reveal-delay-2 group hover:-translate-y-2 transition-transform duration-500">
                         <div class="w-14 h-14 bg-luxuryLight border border-gray-100 rounded-full flex items-center justify-center mb-8 text-luxuryDark group-hover:text-remaxRed transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z"></path></svg>
                         </div>
-                        <h3 class="font-serif text-2xl text-luxuryDark mb-4">Maîtrise de Sherbrooke</h3>
-                        <p class="text-gray-500 font-light text-sm leading-relaxed">Du Nord à Lennoxville, en passant par Rock Forest et Jacques-Cartier, nous connaissons l'attrait de chaque secteur et savons comment le vendre aux futurs acheteurs.</p>
+                        <h3 class="font-serif text-2xl text-luxuryDark mb-4">Secteurs de Sherbrooke</h3>
+                        <p class="text-gray-500 font-light text-sm leading-relaxed">L'Équipe Chiasson De Francesco accompagne des vendeurs dans plusieurs secteurs de Sherbrooke, dont le Nord, Lennoxville, Rock Forest et Jacques-Cartier.</p>
                     </div>
 
                     <div class="bg-white p-10 shadow-floating border border-gray-50 reveal reveal-delay-3 group hover:-translate-y-2 transition-transform duration-500">
                         <div class="w-14 h-14 bg-luxuryLight border border-gray-100 rounded-full flex items-center justify-center mb-8 text-luxuryDark group-hover:text-remaxRed transition-colors">
                             <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                         </div>
-                        <h3 class="font-serif text-2xl text-luxuryDark mb-4">Négociation Stratégique</h3>
-                        <p class="text-gray-500 font-light text-sm leading-relaxed">Appuyés par le réseau mondial RE/MAX, nous protégeons vos intérêts financiers. De la qualification des acheteurs à l'acte notarié, notre expertise sécurise votre transaction.</p>
+                        <h3 class="font-serif text-2xl text-luxuryDark mb-4">Suivi de la transaction</h3>
+                        <p class="text-gray-500 font-light text-sm leading-relaxed">Le courtier immobilier agit à titre de gestionnaire de projet de la transaction, de la réception des promesses d'achat jusqu'à la signature de l'acte notarié.</p>
                     </div>
                 </div>
             </div>
         </section>
 
-        <section id="temoignages" class="py-32 bg-luxuryDark text-white relative">
-            <div class="max-w-7xl mx-auto px-6 lg:px-12">
-                <div class="text-center mb-20 reveal">
-                    <h2 class="font-serif text-4xl md:text-5xl mb-6">Des résultats exceptionnels.</h2>
-                    <div class="w-16 h-px bg-remaxRed mx-auto mb-6"></div>
-                    <p class="text-gray-400 font-light text-lg">Ce que les vendeurs de la région disent de notre équipe.</p>
-                </div>
-
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-10">
-                    <div class="p-10 border border-white/10 bg-white/5 reveal reveal-delay-1 relative">
-                        <div class="text-accentGold text-xl mb-6 tracking-widest">★★★★★</div>
-                        <p class="text-gray-300 font-light text-sm italic mb-8 leading-relaxed">"L'Équipe Chiasson a su mettre en valeur notre maison de Rock Forest de façon spectaculaire. La qualité des photos a généré un achalandage incroyable. Vendue en un temps record."</p>
-                        <div class="pt-6 border-t border-white/10">
-                            <p class="font-serif text-white text-lg">Hélène & Robert C.</p>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Secteur Rock Forest</p>
-                        </div>
-                    </div>
-                    
-                    <div class="p-10 border border-remaxRed/30 bg-white/5 reveal reveal-delay-2 relative overflow-hidden">
-                        <div class="text-accentGold text-xl mb-6 tracking-widest">★★★★★</div>
-                        <p class="text-gray-300 font-light text-sm italic mb-8 leading-relaxed">"Nous étions incertains du prix demandé. L'équipe a fait une analyse parfaite du marché dans le Nord de Sherbrooke. Notre propriété a été vendue au-dessus de nos attentes, sans stress."</p>
-                        <div class="pt-6 border-t border-white/10">
-                            <p class="font-serif text-white text-lg">Famille Lavoie</p>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Nord de Sherbrooke</p>
-                        </div>
-                    </div>
-                    
-                    <div class="p-10 border border-white/10 bg-white/5 reveal reveal-delay-3 relative">
-                        <div class="text-accentGold text-xl mb-6 tracking-widest">★★★★★</div>
-                        <p class="text-gray-300 font-light text-sm italic mb-8 leading-relaxed">"Une présence et un accompagnement de tous les instants. Francesco est un négociateur hors pair. On se sent vraiment pris en charge par des professionnels de haut calibre."</p>
-                        <div class="pt-6 border-t border-white/10">
-                            <p class="font-serif text-white text-lg">Marc-Antoine P.</p>
-                            <p class="text-[10px] text-gray-500 uppercase tracking-widest mt-1">Vendeur</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="py-32 bg-luxuryLight">
+        <section class="py-32 bg-white border-t border-gray-200">
             <div class="max-w-4xl mx-auto px-6 lg:px-12">
                 <div class="text-center mb-16 reveal">
                     <h2 class="font-serif text-4xl text-luxuryDark mb-4">Questions Fréquentes</h2>
@@ -270,31 +232,31 @@
                         </button>
                         <div class="faq-answer bg-luxuryLight">
                             <p class="pb-8 text-gray-500 font-light text-sm leading-relaxed pr-8">
-                                L'Estrie est un marché avec de grandes disparités selon les quartiers. Nous réalisons une Analyse Comparative de Marché (ACM) exhaustive en ciblant spécifiquement votre arrondissement. Nous évaluons les propriétés vendues récemment et celles actuellement sur le marché pour positionner votre propriété stratégiquement.
+                                Une analyse comparative de marché repose sur les propriétés vendues récemment et sur celles qui sont en vente dans le secteur. Elle sert à situer la propriété par rapport à ces ventes.
                             </p>
                         </div>
                     </div>
                     
                     <div class="border-b border-gray-200">
                         <button class="faq-btn w-full text-left py-6 flex justify-between items-center focus:outline-none group">
-                            <span class="font-serif text-xl text-luxuryDark group-hover:text-remaxRed transition-colors">Comment maximisez-vous la visibilité de ma propriété ?</span>
+                            <span class="font-serif text-xl text-luxuryDark group-hover:text-remaxRed transition-colors">Comment la propriété est-elle diffusée ?</span>
                             <svg class="w-5 h-5 text-gray-400 faq-icon group-hover:text-remaxRed" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer bg-luxuryLight">
                             <p class="pb-8 text-gray-500 font-light text-sm leading-relaxed pr-8">
-                                L'attrait pour Sherbrooke dépasse largement les frontières de la ville. Grâce à nos campagnes numériques ciblées et à la force du réseau RE/MAX, nous exposons votre propriété aux acheteurs locaux, mais aussi aux familles et professionnels de l'extérieur cherchant à s'établir dans la région, maximisant ainsi les offres potentielles.
+                                La propriété peut être inscrite et annoncée en ligne, auprès d'acheteurs de Sherbrooke et de personnes de l'extérieur de la région.
                             </p>
                         </div>
                     </div>
 
                     <div class="border-b border-gray-200">
                         <button class="faq-btn w-full text-left py-6 flex justify-between items-center focus:outline-none group">
-                            <span class="font-serif text-xl text-luxuryDark group-hover:text-remaxRed transition-colors">Pourquoi choisir l'Équipe Chiasson De Francesco ?</span>
+                            <span class="font-serif text-xl text-luxuryDark group-hover:text-remaxRed transition-colors">Qui est l'Équipe Chiasson De Francesco ?</span>
                             <svg class="w-5 h-5 text-gray-400 faq-icon group-hover:text-remaxRed" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path></svg>
                         </button>
                         <div class="faq-answer bg-luxuryLight">
                             <p class="pb-8 text-gray-500 font-light text-sm leading-relaxed pr-8">
-                                L'alliance parfaite entre une profonde connaissance du tissu local et un service client de type "boutique". Nous offrons une mise en marché de très haute qualité et nous gérons avec rigueur chaque détail de la transaction, de la préparation de la maison jusqu'au rendez-vous chez le notaire.
+                                L'Équipe Chiasson De Francesco réunit des courtiers immobiliers de RE/MAX D'ABORD, agence immobilière à Sherbrooke. L'accompagnement couvre la préparation de la mise en marché et le suivi jusqu'au rendez-vous chez le notaire.
                             </p>
                         </div>
                     </div>
@@ -306,33 +268,34 @@
 
     <footer class="bg-luxuryDark text-white pt-24 pb-12 border-t-4 border-remaxRed">
         <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-16">
-            <div class="lg:col-span-2">
-                <span class="font-serif text-2xl font-bold tracking-wide uppercase">Vendremamaison<span class="text-remaxRed italic">sherbrooke</span>.com</span>
-                <p class="mt-6 text-gray-400 font-light max-w-sm leading-relaxed text-sm">
-                    L'Équipe Chiasson De Francesco redéfinit l'expérience immobilière en Estrie. Une approche où l'élégance rencontre la performance pour la vente de votre propriété.
+            <div class="lg:col-span-2 min-w-0">
+                <span class="block max-w-full font-serif text-xl sm:text-2xl font-bold tracking-wide uppercase leading-tight">Vendremamaison<wbr><span class="text-remaxRed italic">sherbrooke</span>.com</span>
+                <p class="mt-6 text-gray-300 font-light max-w-md leading-relaxed text-sm">
+                    L'Équipe Chiasson De Francesco, courtiers immobiliers chez RE/MAX D'ABORD, agence immobilière à Sherbrooke.
+                </p>
+                <p class="mt-4">
+                    <a href="https://chiassondefrancesco.ca" class="text-sm text-white underline underline-offset-2 hover:text-remaxRed">Équipe Chiasson De Francesco</a>
                 </p>
             </div>
-            <div>
+            <div class="min-w-0">
                 <h4 class="font-serif text-lg mb-6 tracking-widest text-white">Contact</h4>
-                <ul class="space-y-4 text-gray-400 font-light text-sm">
+                <ul class="space-y-4 text-gray-300 font-light text-sm">
                     <li>157 boul. Jacques-Cartier Sud, Sherbrooke (Québec) J1J 2Z4</li>
                     <li><a href="tel:+18199194631" class="hover:text-white hover:pl-2 transition-all duration-300">T: 819-919-4631</a></li>
-                    <li><a href="mailto:info@vendremamaisonsherbrooke.com" class="hover:text-white hover:pl-2 transition-all duration-300">E: info@vendremamaisonsherbrooke.com</a></li>
+                    <li><a href="mailto:info@vendremamaisonsherbrooke.com" class="inline-block max-w-full break-all hover:text-white hover:pl-2 transition-all duration-300">E: info@vendremamaisonsherbrooke.com</a></li>
                 </ul>
             </div>
-            <div>
-                <h4 class="font-serif text-lg mb-6 tracking-widest text-white">Affiliation</h4>
-                <div class="border border-white/20 p-4 inline-block text-center bg-white/5">
-                    <p class="font-bold text-white tracking-widest text-lg">RE/MAX D'ABORD</p>
-                    <p class="text-[9px] text-gray-400 uppercase tracking-widest mt-1">Courtiers Immobiliers</p>
-                </div>
+            <div class="min-w-0">
+                <h4 class="font-serif text-lg mb-6 tracking-widest text-white">Agence</h4>
+                <p class="text-gray-300 font-light text-sm leading-relaxed">
+                    <a href="https://chiassondefrancesco.ca" class="text-white underline underline-offset-2 hover:text-remaxRed">RE/MAX D'ABORD</a>, agence immobilière, 157 boul. Jacques-Cartier Sud, Sherbrooke (Québec) J1J 2Z4
+                </p>
             </div>
         </div>
         <div class="max-w-7xl mx-auto px-6 lg:px-12 border-t border-white/10 pt-8 flex flex-col md:flex-row justify-between items-center text-[10px] text-gray-500 uppercase tracking-widest font-semibold">
             <p>&copy; 2026 Vendremamaisonsherbrooke.com - Équipe Chiasson De Francesco.</p>
-            <div class="space-x-6 mt-4 md:mt-0">
-                <a href="#" class="hover:text-gray-300 transition-colors">Confidentialité</a>
-                <a href="#" class="hover:text-gray-300 transition-colors">Mentions légales</a>
+            <div class="mt-4 md:mt-0">
+                <a href="https://chiassondefrancesco.ca/confidentialite.html" class="hover:text-gray-300 transition-colors">Confidentialité</a>
             </div>
         </div>
     </footer>
@@ -342,12 +305,12 @@
         const header = document.getElementById('main-header');
         window.addEventListener('scroll', () => {
             if (window.scrollY > 50) {
-                header.classList.add('shadow-md', 'border-gray-200');
-                header.classList.remove('border-transparent', 'py-5');
+                header.classList.add('shadow-md');
+                header.classList.remove('py-4');
                 header.classList.add('py-3');
             } else {
-                header.classList.remove('shadow-md', 'border-gray-200', 'py-3');
-                header.classList.add('border-transparent', 'py-5');
+                header.classList.remove('shadow-md', 'py-3');
+                header.classList.add('py-4');
             }
         });
 
@@ -388,31 +351,7 @@
             });
         });
 
-        // 4. Form Submission Simulation
-        document.getElementById('premiumLeadForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-            
-            const btn = this.querySelector('button[type="submit"]');
-            const originalHTML = btn.innerHTML;
-            
-            btn.innerHTML = `
-                <svg class="animate-spin -ml-1 mr-3 h-4 w-4 text-luxuryDark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
-                    <circle class="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4"></circle>
-                    <path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
-                </svg>
-                Traitement sécurisé...
-            `;
-            btn.disabled = true;
-            btn.classList.add('opacity-90', 'cursor-not-allowed');
-
-            setTimeout(() => {
-                alert("Votre demande d'évaluation a été transmise avec succès à l'Équipe Chiasson De Francesco. Nous communiquerons avec vous très rapidement pour discuter de votre projet à Sherbrooke.");
-                this.reset();
-                btn.innerHTML = originalHTML;
-                btn.disabled = false;
-                btn.classList.remove('opacity-90', 'cursor-not-allowed');
-            }, 1800);
-        });
     </script>
+    <script src="/src/assets/cdf-contact.js" defer></script>
 </body>
 </html>
